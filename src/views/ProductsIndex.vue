@@ -12,7 +12,7 @@
             <div class="card-body">
               <h5 class="card-title">{{ product.name }}</h5>
               <p>${{ product.price }}</p>
-              <router-link to="/products/1" class="btn btn-primary">More Info</router-link>
+              <router-link v-bind:to="`/products/${product.id}`" class="btn btn-primary">More Info</router-link>
             </div>
           </div>
           <br />

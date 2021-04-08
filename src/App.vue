@@ -17,14 +17,12 @@
             <li class="nav-item" v-if="userEmail">
               <router-link class="nav-link" to="/Logout">Logout</router-link>
             </li>
-            <div v-else>
-              <li class="nav-item">
-                <router-link class="nav-link" to="/Login">Login</router-link>
-              </li>
-              <li class="nav-item">
-                <router-link class="nav-link" to="/Signup">Signup</router-link>
-              </li>
-            </div>
+            <li class="nav-item" v-else>
+              <router-link class="nav-link" to="/Login">Login</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/Signup">Signup</router-link>
+            </li>
             <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Dropdown
