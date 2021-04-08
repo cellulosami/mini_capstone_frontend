@@ -48,11 +48,18 @@
       </div>
     </nav>
     <br />
-    <router-view/>
+    <div class="container" id="main-body">
+      <router-view/>
+    </div>
   </div>
 </template>
 
 <style>
+#main-body {
+  background-color: #9fb8ad;
+  border-radius: 10px;
+}
+
 #app {
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   -webkit-font-smoothing: antialiased;

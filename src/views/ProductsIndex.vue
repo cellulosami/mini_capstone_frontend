@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <div class="container" id="products-display">
       <br />
       <h1>{{ message }}</h1>
       <hr />
@@ -19,7 +18,6 @@
           <br />
         </div>
       </div>
-    </div>
   </div>
 </template>
 
@@ -51,10 +49,7 @@ h1 {
   border-radius: 0px;
 }
 
-#products-display {
-  background-color: #9fb8ad;
-  border-radius: 10px;
-}
+
 </style>
 
 <script>
