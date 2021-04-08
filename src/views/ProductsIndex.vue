@@ -12,7 +12,7 @@
             <div class="card-body">
               <h5 class="card-title">{{ product.name }}</h5>
               <p>${{ product.price }}</p>
-              <a href="#" class="btn btn-primary">Add to Cart</a>
+              <router-link to="/products/1" class="btn btn-primary">More Info</router-link>
             </div>
           </div>
           <br />

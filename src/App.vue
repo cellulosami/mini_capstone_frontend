@@ -2,7 +2,7 @@
   <div id="app">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Mini Capstone <span style="font-size: 15px; color: gray; margin-left: 10px;" v-if="userEmail">Welcome, {{ userEmail }}!</span></a>
+        <p class="navbar-brand" href="#" style="margin-bottom: 0px;">Mini Capstone <span style="font-size: 15px; color: gray; margin-left: 10px;" v-if="userEmail">Welcome, {{ userEmail }}!</span></p>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -58,6 +58,7 @@
 #main-body {
   background-color: #9fb8ad;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 #app {
@@ -66,6 +67,10 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
   color: #383e56;
+  background-color: #383e56;
+}
+
+html {
   background-color: #383e56;
 }
 
