@@ -2,7 +2,7 @@
   <div id="app">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Mini Capstone</a>
+        <a class="navbar-brand" href="#">Mini Capstone <span style="font-size: 15px; color: gray; margin-left: 10px;" v-if="userEmail">Welcome, {{ userEmail }}!</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -14,15 +14,17 @@
             <li class="nav-item">
               <router-link class="nav-link" to="/products">Products</router-link>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" v-if="userEmail">
               <router-link class="nav-link" to="/Logout">Logout</router-link>
             </li>
-            <li class="nav-item">
-              <router-link class="nav-link" to="/Login">Login</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link class="nav-link" to="/Signup">Signup</router-link>
-            </li>
+            <div v-else>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/Login">Login</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/Signup">Signup</router-link>
+              </li>
+            </div>
             <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Dropdown
@@ -74,3 +76,24 @@
   color: #fff;
 }
 </style>
+
+<script>
+export default {
+  data: function () {
+    return {
+      userEmail: null
+    };
+  },
+  mounted: function () {
+      localStorage.removeItem("jwt");
+      localStorage.removeItem("userEmail");
+  },
+  updated: function() {
+    if (localStorage.userEmail) {
+      this.userEmail = localStorage.userEmail;
+    } else {
+      this.userEmail = null;
+    }
+  }
+};
+</script>

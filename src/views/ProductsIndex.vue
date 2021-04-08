@@ -65,7 +65,7 @@ export default {
     return {
       message: "Products",
       products: [],
-      errors: []
+      errors: [],
     };
   },
   created: function() {
